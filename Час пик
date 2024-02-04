@@ -1,0 +1,12 @@
+N = int(input("Введите количество часов"))
+A = [int(N) for N in input("Введите пассажиров в каждый час через пробел").split()]
+K = int(input("Введите продолжительность часа пик"))
+sum = 0
+max = -9999
+for i in range(K-1,N):
+  for j in range(K):
+    sum += A[i-j]
+  if max < sum:
+    max = sum
+  sum = 0
+print("Количество людей в час пик: ",max)
