@@ -1,0 +1,9 @@
+n = int(input("Введите количество тортов"))
+tort1 = " торт"
+tort2 = ""
+if n % 10 == 0 or n % 10 >= 5 or n % 100 == 11 or 11 < n < 19:
+  tort2 = "ов"
+if 1 < n % 10 < 5 and n < 10 and n > 20:
+  tort2 = "а"
+print(n,  end='')
+print(tort1+tort2)
