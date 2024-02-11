@@ -1,0 +1,11 @@
+N = 3
+f = open("input.txt", "r")
+sum1 = 0
+n = f.readline()
+while n:
+  A = [N for N in n.split()]
+  sum1+=(int(A[1])*int(A[2]))
+  n = f.readline()
+print(sum1)
+f.close()
+#Похоже, что Replit не может работать со знаками табуляции, поэтому аргумент функции n.split() оставлен пустым. Иначе функция имела бы вид n.split("\t").
