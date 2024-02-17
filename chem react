@@ -32,5 +32,6 @@ while k < len(a):
   k += 1
 A1 = list(set(A))
 A = A1
-print(A)
+for i in range(len(A)):
+  print(A[i], end=' ')
 f.close()
