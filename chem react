@@ -1,0 +1,36 @@
+f = open("8", "r")
+n = f.readline()
+A = list(map(str, n.split()))
+A1 = list(str())
+a = list(str())
+n = f.readline()
+s= ''
+k = 0
+sum = 0
+while n:
+  s = n
+  a.append(n)
+  n = f.readline()
+a.pop(len(a)-1)
+a = [str[:-1] for str in a]
+a.append(s)
+B = [[str(j) for j in a[i].split('->')] for i in range(len(a))]
+B1 = [[str(j) for j in B[i][0].split('+')] for i in range(len(a))]
+B2 = [[str(j) for j in B[i][1].split('+')] for i in range(len(a))]
+while k < len(a):
+  for i in range(len(B1)):
+    for j in range(len(B1[i])):
+      A1 = list(set(A))
+      A = A1
+      for p in range(len(A)):
+        if B1[i][j] == A[p]:
+          sum += 1
+    if sum == len(B1[i]):
+      for m in range(len(B2[i])):
+        A.append(B2[i][m])
+    sum = 0
+  k += 1
+A1 = list(set(A))
+A = A1
+print(A)
+f.close()
