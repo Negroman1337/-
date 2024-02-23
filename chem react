@@ -1,4 +1,4 @@
-f = open("8", "r")
+f = open("7", "r")
 n = f.readline()
 A = list(map(str, n.split()))
 A1 = list(str())
@@ -7,6 +7,7 @@ n = f.readline()
 s= ''
 k = 0
 sum = 0
+Y=0
 while n:
   s = n
   a.append(n)
@@ -34,4 +35,19 @@ A1 = list(set(A))
 A = A1
 for i in range(len(A)):
   print(A[i], end=' ')
+print(" ")
+f1 = open("71.clue", "r")
+n = f1.readline()
+C = list(map(str, n.split()))
+if len(A) == len (C):
+  for i in range(len(A)):
+    for j in range(len(C)):
+      if A[i] == C[j]:
+        Y+=1
+        break
+else:
+  print("Error")
+if len(C) == Y:
+  print("OK")
 f.close()
+f1.close()
