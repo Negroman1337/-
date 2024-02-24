@@ -1,0 +1,22 @@
+a = [1,2,3,4,5,6,7,8,9,10,11]
+low=0
+high = len(a)-1
+midVal=0
+mid=0
+b=""
+while (high-low>=1):
+  mid = (low + high) // 2
+  midVal = a[mid]
+  print("Ваше число больше чем",midVal,"?")
+  b = str(input("да-нет?"))
+  if b == "да":
+    low = mid+1
+  elif b == "нет":
+    high=mid
+  else:
+    print("Вагданери вагда на")
+else:
+  if b == "да":
+    print("Ваше число", a[low])
+  else:
+    print("Ваше число", a[mid])
